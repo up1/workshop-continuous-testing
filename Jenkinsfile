@@ -36,7 +36,7 @@ pipeline {
         }
 		stage('API Testing') {
             steps {
-                echo 'TODO'
+                sh 'cd testing && newman run somkiat.postman_collection.json'
             }
         }
 		stage('Notify result') {
