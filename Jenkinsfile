@@ -36,12 +36,12 @@ pipeline {
         }
 		stage('API Testing') {
             steps {
-                echo "TODO"
+                echo 'TODO'
             }
         }
 		stage('Notify result') {
             steps {
-                echo "TODO"
+                echo 'TODO'
             }
         }
     }
