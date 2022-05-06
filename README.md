@@ -1,5 +1,6 @@
 ## Continuous testing workshop
 * Frontend
+	* ReactJS
 * Backend
 	* Golang
 * Database
