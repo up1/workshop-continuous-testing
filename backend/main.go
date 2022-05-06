@@ -5,6 +5,7 @@ import (
 	"net/http"
 
 	"github.com/labstack/echo/v4"
+	"github.com/labstack/echo/v4/middleware"
 )
 
 func main() {
@@ -13,6 +14,7 @@ func main() {
 	h := &Handler{ dbClient: dbClient }
 	
 	e := echo.New()
+	e.Use(middleware.CORS())
 	e.GET("/accounts/:id", h.Home)
 	e.Logger.Fatal(e.Start(":1323"))
 }
