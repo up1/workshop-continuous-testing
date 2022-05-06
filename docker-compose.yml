@@ -1,5 +1,11 @@
 version: "3"
 services:
+  web:
+    build: ./frontend
+    image: somkiat/demo-web
+    user: "0:0"
+    ports:
+      - 7999:80
   api:
     build: ./backend
     image: somkiat/demo-api
