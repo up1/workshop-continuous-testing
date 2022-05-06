@@ -6,3 +6,4 @@ CREATE TABLE accounts(
 INSERT INTO accounts VALUES (1, 'Demo account 1');
 INSERT INTO accounts VALUES (2, 'Demo account 2');
 INSERT INTO accounts VALUES (3, 'Demo account 3');
+INSERT INTO accounts VALUES (4, 'Demo account 4');
