@@ -21,6 +21,7 @@ const Account = (props) => {
 			Account ID : <input type="text" onChange={(e)=> setAccountId(e.target.value) }/>
 			<p>Account ID = {user.ID}</p>
 			<p>Account Name = {user.name}</p>
+			<h1>Hello Workshop with testing #1</h1>
 		</div>
 	);
 }
