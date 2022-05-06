@@ -46,6 +46,47 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Failure with get account id = 4 :: not found",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code of get account is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});",
+							"",
+							"pm.test(\"Success response of account id = 1\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(\"Account not found\").to.eql(jsonData);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://159.223.45.216:8000/accounts/4",
+					"protocol": "http",
+					"host": [
+						"159",
+						"223",
+						"45",
+						"216"
+					],
+					"port": "8000",
+					"path": [
+						"accounts",
+						"4"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
