@@ -15,4 +15,7 @@ done
 
 echo "Starting api..."
 docker-compose up -d api
+
+echo "Starting web..."
+docker-compose up -d web
 echo "Finish.."
