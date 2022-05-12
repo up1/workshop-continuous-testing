@@ -31,12 +31,15 @@ $kubectl scale deployment backend --replicas=5
 ```
 
 Access to frontend
-* Open url=http://68.183.235.193:32000/ in web browser
+* Open url=http://<node_ip>:32000/ in web browser
 
 
 ### 3. Working with [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/)
 
-
+```
+$kubectl apply -f my_ingress.yml
+$kubectl get ingress
+```
 
 ### Delete all resources
 ```
