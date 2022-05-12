@@ -36,9 +36,18 @@ Access to frontend
 
 ### 3. Working with [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/)
 
+Deploy [NGINX ingress controller](https://kubernetes.github.io/ingress-nginx/deploy/)
+```
+$kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.2.0/deploy/static/provider/cloud/deploy.yaml
+```
+
+Create ingress
 ```
 $kubectl apply -f my_ingress.yml
 $kubectl get ingress
+$kubectl describe ingress
+
+$kubectl get service ingress-nginx-controller --namespace=ingress-nginx
 ```
 
 ### Delete all resources
