@@ -1,0 +1,30 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: db
+  labels:
+    app: db
+spec:
+  containers:
+    - name: db
+      image: postgres:13
+      imagePullPolicy: Always
+      ports:
+        - containerPort: 5432
+          name: db
+      env:
+        - name: POSTGRES_USER
+          valueFrom:
+            secretKeyRef:
+              name: db-config
+              key: db_user
+        - name: POSTGRES_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: db-config
+              key: db_password
+        - name: POSTGRES_DB
+          valueFrom:
+            secretKeyRef:
+              name: db-config
+              key: db_database
