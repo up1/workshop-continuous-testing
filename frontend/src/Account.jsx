@@ -7,7 +7,7 @@ const Account = (props) => {
 
 	useEffect( () => {
 		console.log("Call effect");
-		axios.get('http://159.223.45.216:8000/accounts/' + accountId)
+		axios.get('/api/accounts/' + accountId)
 		.then(response => {
 			setUser(response.data)
 		}).catch(function (error) {
