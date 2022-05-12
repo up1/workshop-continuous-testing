@@ -30,6 +30,9 @@ $kubectl scale deployment frontend --replicas=5
 $kubectl scale deployment backend --replicas=5
 ```
 
+Access to frontend
+* Open url=http://68.183.235.193:32000/ in web browser
+
 Delete all resources
 ```
 $kubectl delete -f k8s/
