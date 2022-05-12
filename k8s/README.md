@@ -48,6 +48,11 @@ $kubectl get ingress
 $kubectl describe ingress
 
 $kubectl get service ingress-nginx-controller --namespace=ingress-nginx
+
+NAME                       TYPE           CLUSTER-IP       EXTERNAL-IP   PORT(S)                      AGE
+ingress-nginx-controller   LoadBalancer   10.105.160.129   <pending>     80:32230/TCP,443:32112/TCP   41
+
+$curl -kL http://178.128.122.79:32230/api/account/1
 ```
 
 ### Delete all resources
